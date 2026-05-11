@@ -43,8 +43,6 @@ Acesse em: `http://localhost:4200`
 npx nx test user-management
 ```
 
-## Respostas Teóricas
-As respostas para as perguntas do documento PDF/DOCX estão localizadas no arquivo `RESPOSTAS.md` na raiz do diretório do desafio.
 
 ## Diferenciais Implementados
 - [x] Nx Monorepo
