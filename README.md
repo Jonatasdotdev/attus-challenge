@@ -42,7 +42,8 @@ Acesse em: `http://localhost:4200`
 ```bash
 npx nx test user-management
 ```
-
+## Respostas
+As repostas se encontram no arquivo Respostas.md na raiz do projeto.
 
 ## Diferenciais Implementados
 - [x] Nx Monorepo
