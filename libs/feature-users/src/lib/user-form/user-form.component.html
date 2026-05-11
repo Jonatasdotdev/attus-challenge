@@ -1,0 +1,49 @@
+<h2 mat-dialog-title>{{ data.mode === 'create' ? 'Adicionar novo usuário' : 'Editar usuário' }}</h2>
+
+<mat-dialog-content>
+  <form [formGroup]="form" class="form-container">
+    <mat-form-field appearance="outline">
+      <mat-label>Usuário (e-mail)</mat-label>
+      <input matInput formControlName="email" placeholder="email@exemplo.com">
+      <mat-error>{{ getErrorMessage('email') }}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Nome completo</mat-label>
+      <input matInput formControlName="name" placeholder="Digite seu nome">
+      <mat-error>{{ getErrorMessage('name') }}</mat-error>
+    </mat-form-field>
+
+    <div class="row">
+      <mat-form-field appearance="outline">
+        <mat-label>CPF</mat-label>
+        <input matInput formControlName="cpf" placeholder="000.000.000-00">
+        <mat-error>{{ getErrorMessage('cpf') }}</mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Número do telefone</mat-label>
+        <input matInput formControlName="phone" placeholder="(00) 00000-0000">
+        <mat-error>{{ getErrorMessage('phone') }}</mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Tipo</mat-label>
+        <mat-select formControlName="phoneType">
+          <mat-option *ngFor="let type of phoneTypes" [value]="type">
+            {{ type }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <p class="info-text">
+      O usuário receberá uma senha provisória para acesso ao sistema por SMS.
+    </p>
+  </form>
+</mat-dialog-content>
+
+<mat-dialog-actions align="start">
+  <button mat-flat-button color="primary" [disabled]="form.invalid" (click)="onSave()">SALVAR</button>
+  <button mat-button (click)="onCancel()">CANCELAR</button>
+</mat-dialog-actions>

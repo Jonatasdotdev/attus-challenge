@@ -13,7 +13,13 @@
     "lib": ["es2020", "dom"],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
-    "paths": {}
+    "paths": {
+      "@attus-challenge/data-access-users": [
+        "./libs/data-access-users/src/index.ts"
+      ],
+      "@attus-challenge/feature-users": ["./libs/feature-users/src/index.ts"],
+      "@attus-challenge/ui-components": ["./libs/ui-components/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

@@ -1,0 +1,155 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f8fafc;
+}
+
+.toolbar {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  padding: 0 40px;
+  background: #1e293b;
+  color: white;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.toolbar span {
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  text-transform: uppercase;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.search-field {
+  width: 300px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.search-field:focus-within {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: #ffffff !important;
+  width: 350px;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.1);
+}
+
+/* Remove label flutuante para um look mais search-bar */
+::ng-deep .search-field .mat-mdc-form-field-label-wrapper {
+  display: none !important;
+}
+
+::ng-deep .search-field .mat-mdc-text-field-wrapper {
+  background-color: transparent !important;
+  height: 40px !important;
+  padding: 0 16px !important;
+  border: none !important;
+}
+
+::ng-deep .search-field .mdc-notched-outline {
+  display: none !important;
+}
+
+::ng-deep .search-field .mat-mdc-form-field-flex {
+  height: 40px !important;
+  align-items: center !important;
+}
+
+::ng-deep .search-field .mat-mdc-form-field-infix {
+  padding: 0 !important;
+  min-height: auto !important;
+  display: flex;
+  align-items: center;
+}
+
+::ng-deep .search-field input {
+  color: #ffffff !important;
+  font-weight: 500;
+  font-size: 0.85rem;
+  caret-color: white !important;
+}
+
+/* Garante que o placeholder seja muted */
+::ng-deep .search-field input::placeholder {
+  color: rgba(255, 255, 255, 0.5) !important;
+  opacity: 1 !important;
+}
+
+::ng-deep .search-field .mat-mdc-form-field-icon-prefix {
+  color: white !important;
+  padding: 0 !important;
+  margin-right: 8px !important;
+  display: flex;
+  align-items: center;
+}
+
+::ng-deep .search-field .mat-icon {
+  font-size: 20px;
+  width: 20px;
+  height: 20px;
+}
+
+.content {
+  padding: 40px 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 32px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.title::before {
+  content: '';
+  display: block;
+  width: 6px;
+  height: 24px;
+  background: #3b82f6;
+  border-radius: 4px;
+}
+
+.user-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 24px;
+}
+
+.fab-button {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  width: 56px;
+  height: 56px;
+  background: #3b82f6;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.fab-button:hover {
+  transform: scale(1.1) rotate(90deg);
+  background: #2563eb;
+}
+
+mat-paginator {
+  margin-top: 48px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}

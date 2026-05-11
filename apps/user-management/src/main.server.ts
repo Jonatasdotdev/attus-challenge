@@ -1,3 +1,4 @@
+import 'zone.js/node';
 import {
   BootstrapContext,
   bootstrapApplication,

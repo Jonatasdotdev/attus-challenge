@@ -1,0 +1,17 @@
+<mat-card class="user-card">
+  <mat-card-header>
+    <div mat-card-avatar class="user-avatar">
+      <mat-icon>person</mat-icon>
+    </div>
+    <mat-card-title>{{ user.name }}</mat-card-title>
+    <mat-card-subtitle>{{ user.email }}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-actions align="end">
+    <button mat-icon-button class="edit-btn" (click)="onEdit()" aria-label="Editar usuário">
+      <mat-icon>edit</mat-icon>
+    </button>
+    <button mat-icon-button class="delete-btn" color="warn" (click)="onDelete()" aria-label="Excluir usuário">
+      <mat-icon>delete</mat-icon>
+    </button>
+  </mat-card-actions>
+</mat-card>

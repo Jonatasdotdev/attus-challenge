@@ -1,13 +1,14 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { NxWelcome } from './nx-welcome';
+import { UserListComponent } from '@attus-challenge/feature-users';
 
 @Component({
-  imports: [NxWelcome, RouterModule],
+  imports: [UserListComponent, RouterModule],
   selector: 'app-root',
   templateUrl: './app.html',
   styleUrl: './app.css',
+  standalone: true,
 })
 export class App {
-  protected title = 'user-management';
+  title = 'user-management';
 }
